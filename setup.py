@@ -1,6 +1,13 @@
-#NEED DOCUMENTATION
+#This script will automatically use Pip to install any dependencies that you don't already have installed
+#It will install new packages to your user directory only to avoid permissions issues
+import subprocess
+import sys
 
-#NEED TO FIX FILE, PIP UPDATED? SYNTAX DOESN'T WORK
 
-import pip
-pip.main(["install","mttkinter"])
+
+
+def install(package):
+    subprocess.call([sys.executable, "-m", "pip", "install", "--user", package])
+
+
+install('mttkinter')
