@@ -1,4 +1,4 @@
-#PC re-creation of "Knockout" by GamePigeon
+# Python re-creation of "Knockout" by GamePigeon
 #Chris Padilla
 #Date/Time: 5/29 10:00am
 
