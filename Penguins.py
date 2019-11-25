@@ -1,8 +1,17 @@
 #PC re-creation of "Knockout" by GamePigeon
 #Chris Padilla
 #Date/Time: 5/29 10:00am
+
 #Current State: Movement and collisions are functional, need to fix angles of collisions which are sometimes erratic. Also need to fix glitch where penguins get stuck on top of each other and infinitely collide. Also need to make setup.py modify the Queue size in mttkinter.py once installed to avoid queue.Full errors.
-import mttkinter #add try/catch block which will automatically install package if import fails??
+
+
+import sys
+#Allow local imports
+sys.path.insert(1, 'Classes/')
+sys.path.insert(1, 'Libraries/')
+
+
+import mttkinter
 from graphics import *
 from random import *
 from threading import *
