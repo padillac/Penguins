@@ -1,13 +1,15 @@
 #This script will automatically use Pip to install any dependencies that you don't already have installed
-#It will install new packages to your user directory only to avoid permissions issues
 import subprocess
 import sys
 
 
 
+def pipinstall(package):
+    subprocess.call([sys.executable, "-m", "pip", "install", package])
+def aptinstall(package):
+    subprocess.call(['sudo', "apt", "install", package])
 
-def install(package):
-    subprocess.call([sys.executable, "-m", "pip", "install", "--user", package])
 
 
-install('mttkinter')
+aptinstall('python3-tk')
+pipinstall('mttkinter')
